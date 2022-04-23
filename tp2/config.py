@@ -1,0 +1,17 @@
+# CONSTANTS_FILE
+
+# Enable static params
+STATIC_PARAMS = True
+
+# Static params values
+STATIC_ANG = 50
+STATIC_VEL = 30
+STATIC_ALT = 1.5
+
+# Graphic params
+X_START_GRAPHIC = 0
+Y_START_GRAPHIC = 0
+Z_START_GRAPHIC = 0
+DRAWING_MARGIN = 5
+TIME_TICK = 0.5
+GRAPH_DELAY_MS = 100
