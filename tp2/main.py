@@ -14,7 +14,7 @@ import table
 
 
 if __name__ == '__main__':
-    ang, vel, alt = params.get(config.STATIC_PARAMS)
-    animation = graphic.Animation(ang, vel, alt)
+    ang_xy, ang_xz, vel, alt = params.get(config.STATIC_PARAMS)
+    animation = graphic.Animation(ang_xy, ang_xz, vel, alt)
     animation.draw()
-    table.generate(ang, vel, alt)
+    table.generate(ang_xy, ang_xz, vel, alt)

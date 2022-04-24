@@ -4,7 +4,8 @@
 STATIC_PARAMS = True
 
 # Static params values
-STATIC_ANG = 50
+STATIC_ANG_XY = 50
+STATIC_ANG_XZ = 0
 STATIC_VEL = 30
 STATIC_ALT = 1.5
 
