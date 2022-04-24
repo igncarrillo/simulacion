@@ -23,7 +23,8 @@ class Animation:
                                                                                physics.calculate_flight_time(ang_xy,
                                                                                                              vel,
                                                                                                              alt)) + config.DRAWING_MARGIN)
-        ax.set_ylim3d(-100, 100)
+        zlim = physics.calculate_z_displacement(ang_xy, ang_xz, vel, physics.calculate_flight_time(ang_xy, vel, alt))
+        ax.set_ylim3d(-zlim - config.DRAWING_MARGIN, zlim + config.DRAWING_MARGIN)
         ax.set_zlim3d(config.Y_START_GRAPHIC,
                       physics.calculate_maximum_height(ang_xy, vel, alt) + config.DRAWING_MARGIN)
         ax.set_title('Desplazamiento del disco [m]', fontdict={'fontsize': 12}, loc='center')
