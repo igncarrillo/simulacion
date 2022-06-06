@@ -38,7 +38,7 @@ class Animation:
                 line, = ax.plot([], [], [], lw=2, label='Posicion ideal disco [m]', color='blue')
                 self.lines.append(line)
                 continue
-            line, = ax.plot([], [], [], lw=1, label='Posicion disco [m]', color='pink')
+            line, = ax.plot([], [], [], lw=1, label='Posicion disco [m], curve {0}'.format(i))
             self.lines.append(line)
 
         # create movement quantity data

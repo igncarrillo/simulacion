@@ -9,7 +9,10 @@ wind_header = ['n', 'ang[d]', 'force[N]', 't[s]']
 
 def generate(position, flight_time):
     for idx, curve in enumerate(position):
-        with open("curve_{0}.csv".format(idx + 1), "w") as tabla:
+        name = "curve_{0}.csv".format(idx)
+        if idx == 0:
+            name = "ideal_curve.csv"
+        with open(name, "w") as tabla:
             writer = csv.writer(tabla)
             writer.writerow(header)
             for i in range(len(curve[0]) - 1):
@@ -25,6 +28,8 @@ def generate_wind(winds):
         writer = csv.writer(tabla)
         writer.writerow(wind_header)
         for i in range(len(winds)):
+            if i == 0:
+                continue
             writer.writerow(
                 [f"{i}", f"{winds[i][0]:2f}", f"{winds[i][1]:2f}", f"{winds[i][2]:2f}"])
         tabla.close()

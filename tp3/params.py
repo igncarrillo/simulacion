@@ -20,7 +20,7 @@ def get_variable_params():
     alt = get_alt_value()
     q = get_shots_value()
     m = get_mass_value()
-    return ang_xy, ang_xz, vel, alt, q, m
+    return ang_xy, ang_xz, vel, alt, q
 
 
 # region values
